@@ -61,7 +61,21 @@ img {
   color: currentColor;
 }
 
+.container {
+  width: 1600px;
+  padding-left: 215px;
+  padding-right: 215px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
+}
+
 /* Хедер */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 .header-logo {
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -69,10 +83,25 @@ img {
   line-height: calc(31 / 26);
   letter-spacing: var(--ls-3);
   color: var(--accent-txt-color);
+
+  margin-right: 93px;
 }
 
 .header-logo-second {
   color: var(--dark-txt-color);
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.header-nav-list,
+.header-contacts-list {
+  display: flex;
+}
+
+.header-nav-list .header-nav-item + .header-nav-item {
+  margin-left: 50px;
 }
 
 .header-link {
@@ -83,7 +112,7 @@ img {
   color: var(--main-txt-color);
 }
 
-.header-contacts {
+.header-contacts-list {
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -91,12 +120,25 @@ img {
   color: var(--secondary-txt-color);
 }
 
+.header-contacts-item {
+  margin-right: 50px;
+}
+
+.header-contacts-item:last-child {
+  margin-right: 0;
+}
+
+.header-contacts-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .header-link.active,
 .header-link:hover,
 .header-link:focus,
-.header-contacts.active,
-.header-contacts:hover,
-.header-contacts:focus {
+.header-contacts-link:hover,
+.header-contacts-link:focus {
   color: var(--accent-txt-color);
 }
 
