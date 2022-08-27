@@ -22,6 +22,10 @@
   --light-bgc: #f5f4fa;
   --accent-bgc: #2196f3;
   --accent-bgc-hover: #188ce8;
+
+  /* Сітки */
+  --indent: 30px;
+  --items: 3;
 }
 
 /**
@@ -384,13 +388,14 @@ img {
 
 /* Проекти */
 .projects-list {
+  /* --items: 3; */
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
 .project-card {
-  flex-basis: calc((100% - 60px) / 3);
+  flex-basis: calc((100% - var(--indent) * var(--items) - 1) / var(--items));
 }
 
 .project-desc {
