@@ -137,13 +137,14 @@ img {
   margin-right: 0;
 }
 
+.header-link,
 .header-contacts-link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
-.header-link.active,
+.header-link.current,
 .header-link:hover,
 .header-link:focus,
 .header-contacts-link:hover,
@@ -152,12 +153,14 @@ img {
 }
 
 /* Hero */
-.hero.section {
+.hero {
   background-color: var(--dark-bgc);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
-.hero.section > div {
+.hero > div {
   width: 696px;
 }
 
@@ -201,7 +204,7 @@ img {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px;
+  width: 0;
   white-space: nowrap;
 }
 
@@ -262,9 +265,14 @@ img {
   border-radius: 0 0 4px 4px;
 }
 
-.team-img {
+/* .team-img {
   margin-bottom: 30px;
+} */
+
+.team-item-block {
+  padding: 30px;
 }
+
 
 .team-item-title {
   font-weight: 500;
@@ -281,16 +289,12 @@ img {
   text-align: center;
   letter-spacing: var(--ls-3);
   color: var(--secondary-txt-color);
-
-  margin-bottom: 30px;
 }
 
 /* Футер */
 .footer {
   background-color: var(--dark-bgc);
-}
 
-.footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -366,12 +370,16 @@ img {
   border-radius: 4px;
 }
 
-.category-button.active-button,
+.category-button.current-button,
 .category-button:hover,
 .category-button:focus {
   background-color: var(--accent-bgc);
   color: var(--light-txt-color);
   cursor: pointer;
+
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 
+              0 1px 2px rgba(0, 0, 0, 0.08),
+              0 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Проекти */
@@ -387,22 +395,19 @@ img {
 
 .project-desc {
   border: 1px solid #EEEEEE;
+  padding: 20px 24px;
+  border-top: none;
 }
 
 .project-name {
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: var(--ls-6);
-
-  padding-top: 31px;
-  padding-left: 24px;
+  margin-bottom: 4px;
 }
 
 .project-type {
   line-height: calc(30 / 16);
   letter-spacing: var(--ls-3);
   color: var(--secondary-txt-color);
-
-  padding-left: 24px;
-  padding-bottom: 26px;
 }
